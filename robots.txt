@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://__GH_HOST__/yiqiyun-site/sitemap.xml
+Sitemap: https://Gefei888.github.io/yiqiyun-site/sitemap.xml
