@@ -2,7 +2,7 @@
 
 亿企云 GEO 生成式引擎优化服务商官网的纯静态版本，部署于 GitHub Pages。
 
-- 线上地址：`https://<username>.github.io/yiqiyun-site/`（部署后更新）
+- 线上地址：https://gefei888.github.io/yiqiyun-site/
 - 内容来源：构建时从站点数据库（`data/site.db`）导出到 `assets/js/data-static.js`
 - 页面：首页 / 关于我们 / 产品服务 / 服务案例 / 公司新闻 / 技术知识 / 联系我们 + 6 篇文章详情 + 404
 
