@@ -1,0 +1,52 @@
+/* 亿企云 · 静态版视觉增强
+   1) 内页首屏 banner：互联网科技风格背景图 + 左侧深色渐变保证文字可读
+   2) 首页 Hero：Canvas 粒子网络动态背景（见 enhance.js） */
+.pagehead {
+  position: relative;
+  overflow: hidden;
+  border-bottom: none;
+  color: #fff;
+}
+.pagehead::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center right;
+}
+.pagehead::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg,
+    rgba(7, 12, 26, .93) 0%,
+    rgba(7, 12, 26, .78) 40%,
+    rgba(7, 12, 26, .30) 78%,
+    rgba(7, 12, 26, .18) 100%);
+}
+.pagehead > .wrap { position: relative; z-index: 2; }
+.pagehead .eyebrow {
+  color: #8FC1FF;
+  background: rgba(43, 92, 246, .22);
+  border: 1px solid rgba(143, 193, 255, .38);
+}
+.pagehead h1 { color: #fff; }
+.pagehead p { color: rgba(226, 236, 255, .85); }
+
+body[data-page="about"]     .pagehead::before { background-image: url(../img/banner-about.jpg); }
+body[data-page="services"]  .pagehead::before { background-image: url(../img/banner-services.jpg); }
+body[data-page="cases"]     .pagehead::before { background-image: url(../img/banner-cases.jpg); }
+body[data-page="news"]      .pagehead::before { background-image: url(../img/banner-news.jpg); }
+body[data-page="knowledge"] .pagehead::before { background-image: url(../img/banner-knowledge.jpg); }
+body[data-page="contact"]   .pagehead::before { background-image: url(../img/banner-contact.jpg); }
+
+/* 首页 Hero 粒子动画层 */
+.hero { position: relative; }
+.hero > .yc-hero-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.hero > .yc-hero-canvas ~ * { position: relative; }
